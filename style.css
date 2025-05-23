@@ -1,0 +1,101 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  color: white;
+}
+
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.container {
+  position: relative;
+  max-width: 600px;
+  margin: 50px auto;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.upload-section label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+input[type="file"] {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.controls > div {
+  width: 48%;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background: #2196f3;
+  border: none;
+  padding: 10px 16px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1;
+  margin: 0 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+  background: #1769aa;
+}
+
+#status {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
