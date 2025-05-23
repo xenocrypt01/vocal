@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Audio Mixer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <video id="bg-video" autoplay muted loop></video>
+
+  <div class="container">
+    <h1>Simple Audio Mixer</h1>
+    <div class="upload-section">
+      <label>
+        Upload Original Song (to mute beat):
+        <input type="file" id="original-song" accept="audio/*" />
+      </label>
+      <label>
+        Upload Replacement Beat:
+        <input type="file" id="replacement-beat" accept="audio/*" />
+      </label>
+    </div>
+
+    <div class="controls">
+      <div>
+        <label>Original Song Volume</label>
+        <input type="range" id="original-volume" min="0" max="1" step="0.01" value="1" />
+      </div>
+      <div>
+        <label>Replacement Beat Volume</label>
+        <input type="range" id="beat-volume" min="0" max="1" step="0.01" value="1" />
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="play-btn" disabled>Play</button>
+      <button id="stop-btn" disabled>Stop</button>
+      <button id="export-btn" disabled>Export Mixed Audio</button>
+    </div>
+
+    <p id="status"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
